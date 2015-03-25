@@ -1,0 +1,129 @@
+body{
+	background: url(./images/global_map.jpg) center center / cover no-repeat fixed;
+}
+.person{
+	background-image: url("./images/person.gif");
+	background-repeat: no-repeat;
+	height: 30px;
+	position: absolute;
+}
+.person span{
+	visibility: hidden;
+}
+.person:hover {
+	cursor:help;
+}
+.person:hover span{
+	display:block;
+	visibility: visible;
+	background:#444;
+	border-radius:4px;
+	color:#FFF;
+	padding:8px 8px 0 8px;
+	margin:2.8em 0 0 0;
+	line-height:1.6;
+	box-shadow: #666 0px 2px 3px;
+	font-size:13px;
+}
+.person:hover span:before {
+	border-bottom:9px #444 solid;
+	border-left:9px transparent solid;
+	border-right:9px transparent solid;
+	width:0;
+	height:0;
+	content:"";
+	display:block;
+	margin-top:-15px;
+}
+.us{
+	top: 30%;
+	left: 25%;
+}
+.uk{
+	top: 30%;
+	left: 45%;
+}
+.australia{
+	top: 75%;
+	left: 85%;
+}
+.france{
+	top: 30%;
+	left: 50%;
+}
+.canada{
+	top: 25%;
+	left: 10%;
+}
+.germany{
+	top: 30%;
+	left: 55%;
+}
+.spain{
+	top: 40%;
+	left: 45%;
+}
+.japan{
+	top: 40%;
+	left: 85%;
+}
+.korea{
+	top: 30%;
+	left: 85%;
+}
+.china{
+	top: 35%;
+	left: 75%;
+}
+.russia{
+	top: 20%;
+	left: 70%;
+}
+.vietnam{
+	top: 55%;
+	left: 75%;
+}
+.indonesia{
+	top: 65%;
+	left: 75%;
+}
+.tanzania{
+	top: 65%;
+	left: 55%;
+}
+.iceland{
+	top: 20%;
+	left: 40%;
+}
+.algeria{
+	top: 50%;
+	left: 45%;
+}
+.zimbabwe{
+	top: 75%;
+	left: 52%;
+}
+.argentina{
+	top: 85%;
+	left: 25%;
+}
+.itaria{
+	top: 40%;
+	left: 50%;
+}
+.greek{
+	top: 40%;
+	left: 55%;
+}
+.brazil{
+	top: 70%;
+	left: 30%;
+}
+.bangladesh{
+	top: 50%;
+	left: 70%;
+}
+.india{
+	top: 50%;
+	left: 65%;
+}
