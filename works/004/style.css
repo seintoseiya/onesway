@@ -1,0 +1,109 @@
+#homo{
+	background-image: url("./images/homo1.gif");
+	background-repeat: no-repeat;
+	background-size: 20%;
+	height: 500px;
+	background-position-x: center;
+}
+#hName{
+	margin-top: 100px;
+	text-align: center;
+	font-family: fantasy;
+	font-size: 30px;
+	color: #F22;
+}
+#emp{
+	display: none;
+}
+#rson{
+	display: none;
+}
+/* under 600px */
+@media all and (min-width: 600px){
+	#homo{
+		background-image: url("./images/homo2.gif");
+	}
+	#emp{
+		display: inline;
+	}
+	#rson{
+		display: inline;
+		opacity: 0.2;
+	}
+	#hName{
+	color: #000;
+}
+}
+/* under 650px */
+@media all and (min-width: 650px){
+	#homo{
+		background-image: url("./images/homo3.gif");
+	}
+	#rson{
+		opacity: 0.3;
+	}
+}
+/* under 700px */
+@media all and (min-width: 700px){
+	#homo{
+		background-image: url("./images/homo4.gif");
+	}
+	#rson{
+		opacity: 0.4;
+	}
+}
+/* under 750px */
+@media all and (min-width: 750px){
+	#homo{
+		background-image: url("./images/homo5.gif");
+	}
+	#rson{
+		opacity: 0.5;
+	}
+}
+/* under 800px */
+@media all and (min-width: 800px){
+	#homo{
+		background-image: url("./images/homo6.gif");
+	}
+	#rson{
+		opacity: 0.6;
+	}
+}
+/* under 850px */
+@media all and (min-width: 850px){
+	#homo{
+		background-image: url("./images/homo7.gif");
+	}
+	#rson{
+		opacity: 0.7;
+	}
+}
+/* under 900px */
+@media all and (min-width: 900px){
+	#homo{
+		background-image: url("./images/homo8.gif");
+	}
+	#rson{
+		opacity: 0.8;
+	}
+}
+/* under 950px */
+@media all and (min-width: 950px){
+	#homo{
+		background-image: url("./images/homo9.gif");
+	}
+	#rson{
+		opacity: 0.9;
+	}
+}
+/* under 1000px */
+@media all and (min-width: 1000px){
+	#homo{
+		background-image: url("./images/homo10.gif");
+	}
+	#rson{
+		opacity: 1;
+	}
+}
+
