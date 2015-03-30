@@ -18,6 +18,10 @@
 #rson{
 	display: none;
 }
+#description{
+	font-family: fantasy;
+	text-align: right;
+}
 /* under 600px */
 @media all and (min-width: 600px){
 	#homo{
