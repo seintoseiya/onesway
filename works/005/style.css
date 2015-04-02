@@ -1,0 +1,86 @@
+@charset "utf-8";
+body{
+	/* ブラウザによる余白の削除 */
+	margin: 0;
+	padding: 0;
+
+	background-repeat: no-repeat;
+	height: 3000px;
+	/* 線形グラデーション */
+/*
+	background-image: -o-linear-gradient(bottom, #4F55CA 0%, #F28E6F 65%, #F0961F 100%);
+	background-image: -moz-linear-gradient(bottom, #4F55CA 0%, #F28E6F 65%, #F0961F 100%);
+	background-image: -webkit-linear-gradient(bottom, #4F55CA 0%, #F28E6F 65%, #F0961F 100%);
+	background-image: -ms-linear-gradient(bottom, #4F55CA 0%, #F28E6F 65%, #F0961F 100%);
+	background-image: linear-gradient(to bottom, #4F55CA 0%, #F28E6F 65%, #F0961F 100%);
+*/
+	/* 円形グラデーション */
+	background: -o-radial-gradient(bottom, circle, #F0961F 0%, #F28E6F 25%, #4F55CA 100%);
+	background: -moz-radial-gradient(bottom, circle, #F0961F 0%, #F28E6F 25%, #4F55CA 100%);
+	background: -webkit-radial-gradient(bottom, circle, #F0961F 0%, #F28E6F 25%, #4F55CA 100%);
+	background: -ms-radial-gradient(bottom, circle, #F0961F 0%, #F28E6F 25%, #4F55CA 100%);
+	background: radial-gradient(bottom, circle, #F0961F 0%, #F28E6F 25%, #4F55CA 100%);
+}
+#star1{
+	margin:5% 0 0 10%;
+}
+#star2{
+	margin:5% 0 0 50%;
+}
+#star3{
+	margin:5% 0 0 70%;
+}
+#star4{
+	margin:5% 0 0 80%;
+}
+#star5{
+	margin:5% 0 0 20%;
+}
+#description{
+	position: fixed;
+	right: 0;
+	top: 60px;
+	background-color: #333;
+	color: #FFF;
+	padding: 8px;
+	/* 各ブラウザ 対応 */
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+#copy{
+	font-family: 'Paytone One', sans-serif; /* google font */
+	font-size: 500%;
+	position: fixed;
+	width: 300px;
+	/* position: fixed時の中央表示 */
+	left: 0;
+	right: 60px; /* 本来、中央表示だと0指定だが少しずらす */
+	margin: auto;
+	bottom: 340px;
+}
+#sea{
+	width: 100%;
+	height: 20%;
+	position: fixed;
+	bottom:0;
+	background-color:#345DAD;
+	border-radius: 10% 10% 0 0;
+	z-index: 1;
+}
+#sun{
+	background-color:#F7522C;
+	border: solid #111;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	position: absolute;
+	top: 2640px;
+	/* position: absolute時の中央表示 */
+	left: 150px; /* 本来、中央表示だと0指定だが少しずらす */
+	right: 0;
+	margin: auto;
+	z-index: 0;
+}
