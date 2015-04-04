@@ -52,12 +52,12 @@ body{
 }
 #copy{
 	font-family: 'Paytone One', sans-serif; /* google font */
-	font-size: 500%;
+	font-size: 80px;
 	position: fixed;
-	width: 300px;
-	/* position: fixed時の中央表示 */
+	width: 350px;
+	/* position: fixed時の左右中央表示 */
 	left: 0;
-	right: 60px; /* 本来、中央表示だと0指定だが少しずらす */
+	right: 0;
 	margin: auto;
 	bottom: 340px;
 }
@@ -78,8 +78,8 @@ body{
 	border-radius: 50%;
 	position: absolute;
 	top: 2640px;
-	/* position: absolute時の中央表示 */
-	left: 150px; /* 本来、中央表示だと0指定だが少しずらす */
+	/* position: absolute時の左右中央表示 */
+	left: 160px; /* 本来、中央表示だと0指定だが少しずらす */
 	right: 0;
 	margin: auto;
 	z-index: 0;
