@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Bomb</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="main">
+		<p><img src="./imgs/other_bomb01.png" name="bomb"></p>
+		<input type="button" class="lot" value="1" onclick="rand(0)">
+		<input type="button" class="lot" value="2" onclick="rand(1)">
+		<input type="button" class="lot" value="3" onclick="rand(2)">
+		<input type="button" class="lot" value="4" onclick="rand(3)">
+		<input type="button" class="lot" value="5" onclick="rand(4)">
+	</div>
+	<script type="text/javascript">
+	//0～4までの乱数を発生させる
+	var randnum = Math.floor( Math.random() * 5 );
+	function rand(num) {
+		//引数を数字に変換
+		var n = parseInt(num);
+		if (randnum == n) {
+			alert("Out!!!");
+			document.bomb.src = "./imgs/booom.gif";
+		}else{
+			alert("Safe");
+		}
+	}
+	</script>
+</body>
+</html>
