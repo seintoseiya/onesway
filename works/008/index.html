@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>ProgressBar</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body onload="hideProg()">
+	<div id="main">
+		<div id="progBase"></div>
+		<div id="prog"></div>
+	</div>
+	<img src="./images/morning.jpg" onload="ShowProg()">
+	<img src="./images/noon.jpg" onload="ShowProg()">
+	<img src="./images/evening.jpg" onload="ShowProg()">
+	<img src="./images/night.jpg" onload="ShowProg()">	
+	<script type="text/javascript">
+	maxNum = 4;
+	cnt = 0;
+	wSize = 400;
+	function hideProg(){
+		document.getElementById("progBase").style.visibility = "hidden";
+		document.getElementById("prog").style.visibility = "hidden";
+	}
+	function ShowProg(){
+		cnt++;
+		barWidth = Math.floor((cnt / maxNum) * wSize);
+		document.getElementById("prog").style.width = barWidth + "px";	
+	}
+	</script>
+</body>
+</html>

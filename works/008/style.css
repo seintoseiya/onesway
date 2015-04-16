@@ -1,0 +1,19 @@
+@charset "utf-8";
+#main{
+	margin: 0 auto;
+}
+#progBase{
+	width: 410px;
+	height: 30px;
+	background-color: rgb(100, 100, 100);
+	border-radius: 20px;
+}
+#prog{
+	position: relative;
+	top: -25px;
+	left: 5px;
+	width: 0;
+	height: 20px;
+	background-color: rgb(45, 199, 169);
+	border-radius: 10px;
+}
