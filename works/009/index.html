@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Expansion</title>
+</head>
+<body>
+	<h1>マウスオーバーで拡大</h1>
+	<div class="photoFrame">
+		<img src="./images/morning.jpg" width="64" height="48">
+		<img src="./images/noon.jpg" width="64" height="48">
+		<img src="./images/evening.jpg" width="64" height="48">
+		<img src="./images/night.jpg" width="64" height="48">	
+	</div>
+	<script type="text/javascript">
+	window.onload = function(){
+		for (i = 0; i < 4; i++) {
+			imgObj = document.getElementsByTagName('img')[i];
+			imgObj.style.position = "absolute";
+			imgObj.style.left = Math.floor(Math.random() * 20) * 15 + 20 + "px";
+			imgObj.style.top = Math.random() * 200 + 50 + "px";
+			imgObj.onmouseover = function(){
+				this.width = 160; this.height = 120; this.style.zIndex = 4;
+			}
+			imgObj.onmouseout = function(){
+				this.width = 64; this.height = 48; this.style.zIndex = 1;
+			}
+		}
+	}
+	</script>
+</body>
+</html>
