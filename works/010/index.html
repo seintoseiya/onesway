@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>StopWatch</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="main">
+		<h1>StopWatch</h1>
+		<div id="left">
+		<form name="form_sw">
+			<p><input type="button" name="bstart" value="Start" onclick="startCount()"></p>
+			<p><input type="button" name="reset" value="Reset" onclick="resetTime()"></p>
+		</form>
+		</div>
+		<div id="right">
+			<h2 id="timer"></h2>
+		</div>
+	</div>
+	<script type="text/javascript"><!--
+	sw_status = 0; // startとstopのフラグ
+	resetTime();
+	function resetTime(){
+		if (sw_status == 1) {startCount();}
+		timeNum = 0; // 時間の初期値
+		document.getElementById("timer").innerHTML = count_format(0);
+	}
+	function startCount(){
+		if (sw_status == 0) {
+			document.form_sw.bstart.value = "Stop";
+			sw_status = 1;
+			timerID = setInterval("countUp()",10); // 0.01秒毎に呼び出し
+		} else {
+			document.form_sw.bstart.value = "Start";
+			sw_status = 0;
+			clearInterval(timerID); // 呼び出しの停止
+		}
+	}
+	function countUp(){
+		timeNum++;
+		document.getElementById("timer").innerHTML = count_format(timeNum);
+	}
+	function count_format(num) {
+		var ts = num / 100;
+		var tm = Math.floor(ts / 60);
+		ts = (ts % 60).toFixed(2);
+		var th = Math.floor(tm / 60);
+		tm = tm % 60;
+		if (ts < 10) ts = "0" + ts;
+		if (tm < 10) tm = "0" + tm;
+		if (th < 10) th = "0" + th;
+	    return th + ":" + tm + ":" + ts;
+	}
+	// --></script>
+</body>
+</html>
