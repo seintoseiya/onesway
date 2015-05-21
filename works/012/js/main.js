@@ -1,7 +1,7 @@
 enchant(); // 初期化
  
 window.onload = function() {
-    var game = new Game(320, 320); // ゲーム本体を準備すると同時に、表示される領域の大きさを設定しています。
+    var game = new Game(320, 400); // ゲーム本体を準備すると同時に、表示される領域の大きさを設定しています。
     game.fps = 24; // frames（フレーム）per（毎）second（秒）：ゲームの進行スピードを設定しています。
     game.preload('./img/bg1.png','./img/chara1.png','./img/icon0.png','./img/start.png','./img/gameover.png'); // pre（前）-load（読み込み）：ゲームに使う素材をあらかじめ読み込んでおきます。
 
@@ -21,7 +21,7 @@ window.onload = function() {
             var startImage = new Sprite(236, 48);                   // スプライトを作る
             startImage.image = game.assets['./img/start.png'];     // スタート画像を設定
             startImage.x = 42;                                      // 横位置調整
-            startImage.y = 136;                                     // 縦位置調整
+            startImage.y = 176;                                     // 縦位置調整
             scene.addChild(startImage);                             // シーンに追加
 
             // タイトルラベル設定
@@ -29,7 +29,7 @@ window.onload = function() {
             title.textAlign = 'center';                             // 文字を中央寄せ
             title.color = '#ffffff';                                // 文字を白色に
             title.x = 0;                                           // 横位置調整
-            title.y = 96;                                           // 縦位置調整
+            title.y = 136;                                           // 縦位置調整
             title.font = '28px sans-serif';                         // 28pxのゴシック体にする
             scene.addChild(title);                                  // シーンに追加
 
@@ -37,7 +37,7 @@ window.onload = function() {
             var subTitle = new Label('- ひたすら爆弾をよけるゲーム  -');  // ラベルを作る
             subTitle.textAlign = 'center';                          // 文字中央寄せ
             subTitle.x = 0;                                         // 横位置調整
-            subTitle.y = 196;                                       // 縦位置調整
+            subTitle.y = 236;                                       // 縦位置調整
             subTitle.font = '14px sans-serif';                      // 14pxのゴシック体にする
             scene.addChild(subTitle);                               // シーンに追加
 
@@ -61,7 +61,7 @@ window.onload = function() {
             var scene = new Scene();                            // 新しいシーンを作る
 
             // 背景
-            var bg1 = new Sprite(320, 320);            // スプライトを作る
+            var bg1 = new Sprite(320, 400);            // スプライトを作る
             bg1.image = game.assets['./img/bg1.png']; // 画像を設定
             scene.addChild(bg1);                       // シーンに追加
             bg1.x = 0;                                 // 横位置調整
@@ -79,7 +79,7 @@ window.onload = function() {
             var kuma = new Sprite(32, 32);  // くまというスプライト(操作可能な画像)を準備すると同時に、スプライトの表示される領域の大きさを設定しています。
             kuma.image = game.assets['./img/chara1.png']; // くまにあらかじめロードしておいた画像を適用します。
             kuma.x = 100; // くまの横位置を設定します。
-            kuma.y = 250; // くまの縦位置を設定します。
+            kuma.y = 300; // くまの縦位置を設定します。
             scene.addChild(kuma); // ゲームのシーンにくまを表示させます。
             kuma.frame = [0, 0, 1, 1, 2, 2];   // select sprite frame
             scene.backgroundColor  = '#7ecef4'; // ゲームの動作部分の背景色を設定しています。
@@ -219,6 +219,12 @@ window.onload = function() {
                     scene.removeChild(ob6);
                     ob6 = makeOb();
                 }
+                if(item.y > 320){
+                    scene.removeChild(item);
+                }
+                if(item2.y > 320){
+                    scene.removeChild(item2);
+                }
                 if(item.y > 320+itemPer){
                     item = makeItem();
                     itemPer = 50 + Math.floor(Math.random() * 640);
@@ -294,7 +300,7 @@ window.onload = function() {
             var gameoverImage = new Sprite(189, 97);                   // スプライトを作る
             gameoverImage.image = game.assets['./img/gameover.png'];  // ゲームオーバー画像を設定
             gameoverImage.x = 65;                                      // 横位置調整
-            gameoverImage.y = 112;                                     // 縦位置調整
+            gameoverImage.y = 152;                                     // 縦位置調整
             scene.addChild(gameoverImage);                             // シーンに追加
 
             // スコアラベル設定
@@ -302,15 +308,15 @@ window.onload = function() {
             label.textAlign = 'center';                                // 文字を中央寄せ
             label.color = '#ffffff';                                      // 文字を白色に
             label.x = 0;                                               // 横位置調整
-            label.y = 60;                                              // 縦位置調整
+            label.y = 100;                                              // 縦位置調整
             label.font = '40px sans-serif';                            // 40pxのゴシック体にする
             scene.addChild(label);                                     // シーンに追加
 
             // リトライラベル(ボタン)設定
             var retryLabel = new Label('TRY AGAIN');                // ラベルを作る
             retryLabel.color = '#ffffff';                              // 文字を白色に
-            retryLabel.x = 0;                                          // 横位置調整
-            retryLabel.y = 300;                                        // 縦位置調整
+            retryLabel.x = 20;                                          // 横位置調整
+            retryLabel.y = 350;                                        // 縦位置調整
             retryLabel.font = '20px sans-serif';                       // 20pxのゴシック体にする
             scene.addChild(retryLabel);                                // シーンに追加
 
