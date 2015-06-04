@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>NumberTap</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+	<div id="main">
+		<h1>小さい順にボタンをタップ</h1>
+		<p class="time">Time: <span id="timeNum">0.0</span></p>
+		<div id="board">
+			<button id="button0" onclick="touched(0)">?</button>
+			<button id="button1" onclick="touched(1)">?</button>
+			<button id="button2" onclick="touched(2)">?</button><br>
+			<button id="button3" onclick="touched(3)">?</button>
+			<button id="button4" onclick="touched(4)">?</button>
+			<button id="button5" onclick="touched(5)">?</button><br>
+			<button id="button6" onclick="touched(6)">?</button>
+			<button id="button7" onclick="touched(7)">?</button>
+			<button id="button8" onclick="touched(8)">?</button>
+			<p><input type="button" value="Start!" id="timeStart"></p>
+		</div>
+	</div>
+	<script><!--
+		var currentNum;
+		var timeNum;
+		var startTime;
+		var isPlaying = false;
+
+		document.getElementById('timeStart').onclick = function(){
+			timeStart();
+		}
+
+
+		function timeStart() {
+			initBoard();
+			currentNum = 0;
+			startTime = (new Date()).getTime();
+			if(!isPlaying){
+				isPlaying = true;
+				runTimer();	
+			}
+		}
+
+		function initBoard(){
+			var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+			var num;
+			var btn;
+			for(var i=0; i<9; i++){
+				num = nums.splice(Math.floor(Math.random() * nums.length), 1);
+				btn = document.getElementById('button' + i);
+				btn.innerHTML = num;
+				btn.disabled = false;
+			}
+		}
+
+		function touched(n){
+			var btn = document.getElementById('button'+n);
+			if(btn.innerHTML == currentNum){
+				btn.disabled = true;
+				currentNum++;
+			}
+			if(currentNum == 9){
+				clearTimeout(timeNum);
+				isPlaying = false;
+				alert('Your score: ' + document.getElementById("timeNum").innerHTML);
+			}
+		}
+
+		function runTimer(){
+			document.getElementById('timeNum').innerHTML = ((new Date().getTime() - startTime) / 1000).toFixed(1);
+			timeNum = setTimeout(function(){
+				runTimer();
+			}, 100);
+		}
+	// --></script>
+</body>
+</html>
