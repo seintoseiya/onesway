@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8" />
+	<title>Doodle</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<p>
+		<select id="penType">
+			<option value="0">線</option>
+			<option value="1">四角</option>
+		</select>
+		<select id="penColor">
+			<option value="black">黒</option>
+			<option value="red">赤</option>
+			<option value="blue">青</option>
+			<option value="white">白</option>
+		</select>
+		<select id="penWidth">
+			<option value="1">細</option>
+			<option value="2">中</option>
+			<option value="3">太</option>
+		</select>
+		<input type="button" id="erase" value="消去">
+		<input type="button" id="save" value="ギャラリーに追加">
+	</p>
+	<canvas width="400" height="200" id="mycanvas">
+		Canvasに対応したブラウザを用意してください。
+	</canvas>
+	<div id="gallery"></div>
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
