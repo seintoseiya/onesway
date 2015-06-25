@@ -1,0 +1,70 @@
+@charset "utf-8";
+.barriers > div{
+	background-color: #FFB;
+	position: absolute;
+	font-size: 20px;
+}
+#start{
+	background-color: #E66;
+	width: 100px;
+	height: 100px;
+	top: 100px;
+	left: 10px;
+	text-align: center;
+	line-height: 100px;
+	border-radius: 50%;
+	border: 10px solid #ff0;
+}
+#barrier1{
+	width: 100px;
+	height: 10px;
+	top: 155px;
+	left: 120px;
+}
+#barrier2{
+	width: 20px;
+	height: 100px;
+	top: 165px;
+	left: 200px;
+}
+#barrier3{
+	width: 100px;
+	height: 10px;
+	top: 265px;
+	left: 200px;
+}
+#barrier4{
+	width: 8px;
+	height: 100px;
+	top: 265px;
+	left: 300px;
+}
+#barrier5{
+	width: 100px;
+	height: 6px;
+	top: 365px;
+	left: 300px;
+}
+#goal{
+	width: 100px;
+	height: 100px;
+	top: 305px;
+	left: 390px;
+	text-align: center;
+	line-height: 100px;
+	border-radius: 50%;
+	border: 10px solid #ff0;
+	z-index: -1;
+}
+#message{
+	position: absolute;
+	top: 450px;
+	left: 50px;
+}
+#sumaho{
+	position: absolute;
+	top: 50px;
+	left: 350px;
+	color: red;
+}
+
