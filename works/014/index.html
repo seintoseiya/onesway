@@ -11,28 +11,21 @@
 		<h1>小さい順にボタンをタップ</h1>
 		<p class="time">Time: <span id="timeNum">0.0</span></p>
 		<div id="board">
-			<button id="button0" onclick="touched(0)">?</button>
-			<button id="button1" onclick="touched(1)">?</button>
-			<button id="button2" onclick="touched(2)">?</button><br>
-			<button id="button3" onclick="touched(3)">?</button>
-			<button id="button4" onclick="touched(4)">?</button>
-			<button id="button5" onclick="touched(5)">?</button><br>
-			<button id="button6" onclick="touched(6)">?</button>
-			<button id="button7" onclick="touched(7)">?</button>
-			<button id="button8" onclick="touched(8)">?</button>
 			<p><input type="button" value="Start!" id="timeStart"></p>
 		</div>
 	</div>
-	<script><!--
+	<script>
+	(function(){
+		var size = 3;
 		var currentNum;
 		var timeNum;
 		var startTime;
 		var isPlaying = false;
 
+		// HTML内でonclickによるJavaScriptの呼び出しは好ましくない
 		document.getElementById('timeStart').onclick = function(){
 			timeStart();
 		}
-
 
 		function timeStart() {
 			initBoard();
@@ -44,28 +37,44 @@
 			}
 		}
 
-		function initBoard(){
-			var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-			var num;
+		function createButton(num){
 			var btn;
-			for(var i=0; i<9; i++){
-				num = nums.splice(Math.floor(Math.random() * nums.length), 1);
-				btn = document.getElementById('button' + i);
-				btn.innerHTML = num;
-				btn.disabled = false;
-			}
+			btn = document.createElement('button');
+			btn.type = 'button';
+			btn.innerHTML = num;
+			btn.onclick = function(){
+				if(this.innerHTML == currentNum){
+					this.disabled = true;
+					currentNum++;
+				}
+				if(currentNum == size * size){
+					clearTimeout(timeNum);
+					isPlaying = false;
+					alert('Your score: ' + document.getElementById("timeNum").innerHTML);
+				}
+			};
+			return btn;
 		}
+		function initBoard(){
+			var buttons = [];
+			var board;
+			var button;
 
-		function touched(n){
-			var btn = document.getElementById('button'+n);
-			if(btn.innerHTML == currentNum){
-				btn.disabled = true;
-				currentNum++;
+			for (var i = 0; i < size * size; i++){
+				buttons.push(createButton(i));
 			}
-			if(currentNum == 9){
-				clearTimeout(timeNum);
-				isPlaying = false;
-				alert('Your score: ' + document.getElementById("timeNum").innerHTML);
+
+			board = document.getElementById('board');
+			while(board.firstChild){
+				board.removeChild(board.firstChild);
+			}
+
+			while(buttons.length){
+				button = buttons.splice(Math.floor(Math.random() * buttons.length), 1);
+				board.appendChild(button[0]);
+				if(buttons.length % size == 0){
+					board.appendChild(document.createElement('br'));
+				}
 			}
 		}
 
@@ -75,6 +84,7 @@
 				runTimer();
 			}, 100);
 		}
+	})();
 	// --></script>
 </body>
 </html>
