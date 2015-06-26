@@ -9,8 +9,8 @@ $(function(){
     });
     $('#goal').mouseover(function() {
         if(isPlaying){
-            alert("Goal!");
             isPlaying = false;
+            alert("Goal!");
             goal = true;
             $('.barriers > div').css('background-color', '#FFB');
             $('#goal').css('background-color', '#E66');
@@ -19,8 +19,8 @@ $(function(){
     });
     $('.barriers').mouseleave(function() {
         if(isPlaying){
-            alert("Out!");
             isPlaying = false;
+            alert("Out!");
             $('.barriers > div').css('background-color', '#FFB');
             $('#start').css('background-color', '#E66');
             $('#message').html("Startにマウスを移動してください");
