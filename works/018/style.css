@@ -1,0 +1,10 @@
+@charset "utf-8";
+canvas{
+	position: absolute;
+}
+#parent{
+	border: 10px solid;
+}
+#child{
+	border: 10px solid #888;
+}
