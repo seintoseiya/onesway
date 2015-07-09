@@ -1,1 +1,113 @@
 @charset "utf-8";
+body{
+	
+}
+#container{
+	margin: 0 auto;
+	width: 600px;
+}
+#inputField{
+	width: 100%;
+	margin: 10px;
+}
+#talkField{
+	width: 100%;
+	height: 500px;
+	padding: 10px;
+	background-color: #7897C5;
+	border: 1px solid grey;
+	border-radius: 10px;
+	overflow: scroll;
+	word-break: break-all;
+}
+#message{
+	width: 40%;
+}
+.user{
+	clear: both;
+}
+
+/*******************************
+* 左からの吹き出し
+********************************/
+.left_balloon {
+    position: relative;
+    background: #85e249;
+    /*border: 1px solid #777;*/
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 20%;
+    clear: both;
+    max-width: 500px;
+    float: left;
+}
+.left_balloon:after,
+.left_balloon:before {
+    left: 15px;
+    top: -5px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.left_balloon:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #85e249;
+    border-width: 7px;
+    margin-top: -7px;
+}
+/*.left_balloon:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-right-color: #000;
+    border-width: 8px;
+    margin-top: -8px;
+}*/
+ 
+/*******************************
+* 右からの吹き出し
+********************************/
+.right_balloon {
+    position: relative;
+    background: #85e249;
+    border: 1px solid #777;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 20%;
+    clear: both;
+    max-width: 500px;
+    float: right;
+}
+.right_balloon:after,
+.right_balloon:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.right_balloon:after {
+    border-color: rgba(133, 226, 73, 0);
+    border-left-color: #85e249;
+    border-width: 7px;
+    margin-top: -7px;
+}
+.right_balloon:before {
+    border-color: rgba(119, 119, 119, 0);
+    border-left-color: #777;
+    border-width: 8px;
+    margin-top: -8px;
+}
+ 
+/*******************************
+* 割り込みを解除
+********************************/
+.clear_balloon{
+  clear: both;
+}

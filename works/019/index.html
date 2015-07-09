@@ -2,14 +2,25 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8" />
-	<title>Ajax</title>
+	<title>Chat</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Ajax</h1>
-	<input type="text" name="name" id="message">
-	<input type="button" id="greet" value="send">
-	<div id="result"></div>
+	<div id="container">
+	<h1>Chat</h1>
+	<div id="talkField">
+		<div id="result"></div>
+		<br class="clear_balloon"/>
+		<div id="end"></div>
+	</div>
+	<div id="inputField">
+		<p>
+			Name: <input type="text" name="user" id="user">
+			Message: <input type="text" name="message" id="message">
+			<input type="button" id="greet" value="send">
+		</p>
+	</div>
+	</div>
 	<script src="./js/jquery-2.1.4.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
