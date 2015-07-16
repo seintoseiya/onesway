@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8" />
+	<title>Puzzle</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Puzzle</h1>
+	<div id="pieces" ondragover="f_dragover(event)" ondrop="f_dropBase(event)">
+		<img src="./img/piece5.png" id="piece5" draggable="true" ondragstart="f_dragstart(event)">
+		<img src="./img/piece3.png" id="piece3" draggable="true" ondragstart="f_dragstart(event)">
+		<img src="./img/piece9.png" id="piece9" draggable="true" ondragstart="f_dragstart(event)">
+		<img src="./img/piece2.png" id="piece2" draggable="true" ondragstart="f_dragstart(event)">
+		<img src="./img/piece8.png" id="piece8" draggable="true" ondragstart="f_dragstart(event)">
+		<img src="./img/piece4.png" id="piece4" draggable="true" ondragstart="f_dragstart(event)">
+		<img src="./img/piece1.png" id="piece1" draggable="true" ondragstart="f_dragstart(event)">
+		<img src="./img/piece7.png" id="piece7" draggable="true" ondragstart="f_dragstart(event)">
+		<img src="./img/piece6.png" id="piece6" draggable="true" ondragstart="f_dragstart(event)">
+		
+	</div>
+	<div id="dropboxs">
+		<div id="dropbox1" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+		<div id="dropbox2" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+		<div id="dropbox3" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+		<div id="dropbox4" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+		<div id="dropbox5" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+		<div id="dropbox6" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+		<div id="dropbox7" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+		<div id="dropbox8" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+		<div id="dropbox9" ondragover="f_dragover(event)" ondrop="f_drop(event)"></div>
+	</div>
+	
+	<script src="./js/main.js"></script>
+</body>
+</html>

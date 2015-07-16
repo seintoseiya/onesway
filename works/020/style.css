@@ -1,0 +1,32 @@
+#pieces {
+	/*単なるスタイリング*/
+	width:306px;
+	height:306px;
+	background-color:#FF9966;
+	border:1px solid #cc3333;
+	float: left;
+	margin: 0 20px;
+}
+#pieces > img{
+	float: left;
+	width: 100px;
+	height: 100px;
+	border:1px solid #cc3333;
+}
+#dropboxs{
+	width: 306px;
+	float: left;
+}
+#dropboxs > div {
+	/*単なるスタイリング*/
+	width:100px;
+	height:100px;
+	background-color:#CCFF66;
+	border:1px solid #00cc00;
+	float: left;
+	/*以下はwebkit系ブラウザでドラッグ＆ドロップを動かすための指定（ブラウザのサポートが進めば、必要なくなると思われます）*/
+	-khtml-user-drag: element;
+}
+#dropboxs > div > img{
+	width: 100px;
+}
