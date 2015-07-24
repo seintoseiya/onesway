@@ -1,0 +1,85 @@
+@charset "utf-8";
+body{
+	margin: 0;
+	padding: 0;
+	height: 3000px;
+}
+.box{
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	top: 10px;
+	opacity: 0.3;
+}
+#pa1{
+	left: 10px;
+	background: red;
+}
+#pa2{
+	left: 10px;
+	background: blue;
+}
+#pa3{
+	left: 10px;
+	background: green;
+}
+#ra1-1{
+	left: 60px;
+	background: red;
+}
+#ra1-2{
+	left: 60px;
+	background: blue;
+}
+#ra1-3{
+	left: 60px;
+	background: green;
+}
+#ra2-1{
+	left: 110px;
+	background: red;
+}
+#ra2-2{
+	left: 110px;
+	background: blue;
+}
+#ra2-3{
+	left: 110px;
+	background: green;
+}
+#tu1{
+	left: 160px;
+	background: red;
+}
+#tu2{
+	left: 160px;
+	background: blue;
+}
+#tu3{
+	left: 160px;
+	background: green;
+}
+#ku1{
+	left: 210px;
+	background: red;
+}
+#ku2{
+	left: 210px;
+	background: blue;
+}
+#ku3{
+	left: 210px;
+	background: green;
+}
+#su1{
+	left: 260px;
+	background: red;
+}
+#su2{
+	left: 260px;
+	background: blue;
+}
+#su3{
+	left: 260px;
+	background: green;
+}
