@@ -1,0 +1,46 @@
+@charset "utf-8";
+body{
+	margin: 0 auto;
+	padding: 0;
+	width: 600px;
+	height: 3000px;
+}
+.box{
+	padding: 0;
+	margin: 0;
+	height: 480px;
+}
+#bg1{
+	background: url('img/c1.jpg') no-repeat;
+}
+#bg2{
+	background: url('img/c2.jpg') no-repeat;
+}
+#bg3{
+	background: url('img/c3.jpg') no-repeat;
+}
+.msg{
+	font-size: 48px;
+	font-weight: bold;
+	font-family: Verdana, Arial, sans-serif;
+	opacity: 0;
+	position: fixed;
+}
+#msg1{
+	color: #F27398;
+}
+#msg2{
+	color: #FFD464;
+}
+#msg3{
+	color: #2FCDB4;
+}
+#msg4{
+	color: #F26964;
+}
+#msg5{
+	color: #1253A4;
+}
+#msg6{
+	color: #333333;
+}
