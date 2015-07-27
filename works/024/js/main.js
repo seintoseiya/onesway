@@ -5,7 +5,7 @@ $(function () {
         var cy = $(this).height() / 2;
         var dx = e.clientX - cx;
         var dy = e.clientY - cy;
-        console.log(dx,dy);
+        // console.log(dx,dy);
         if(dx<25 && dx>-20){
         	$('#box2').css('left', cx + dx * 0.5);
 	        $('#box3').css('left', cx + dx * 0.7);
