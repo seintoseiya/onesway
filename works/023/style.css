@@ -1,14 +1,13 @@
 @charset "utf-8";
 body{
-	margin: 0 auto;
 	padding: 0;
-	width: 600px;
-	height: 3000px;
+	height: 3500px;
+	margin: 0;
 }
 .box{
 	padding: 0;
 	margin: 0;
-	height: 480px;
+	height: 800px;
 }
 #bg1{
 	background: url('img/c1.jpg') no-repeat;
