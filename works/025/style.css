@@ -1,0 +1,10 @@
+@charset "utf-8";
+#container{
+	width: 600px;
+	margin: 0 auto;
+}
+.flex-caption{
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+}
