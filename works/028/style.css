@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+#container{
+	width: 90%;
+	max-width: 1100px;
+    min-width: 400px;
+    margin: 50px auto;
+    background-color: #EEE;
+    padding: 10px;
+}
+.pin1{
+	background-color: rgb(230, 130, 130);
+	height: 300px;
+}
+.pin2{
+	background-color: rgb(130, 230, 130);
+	height: 350px;
+}
+.pin3{
+	background-color: rgb(130, 130, 230);
+	height: 480px;
+}
+
+#columns {
+    position: relative;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 4;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 4; /* 何列のカラムを作るか */
+    column-gap: 10px; /* カラム間のスペース */
+    column-fill: auto; /* カラムをどういう風に配置していくか|balance はカラム同士の高さを均等に, autoは最初のカラムから順番に突っ込んでいく */
+    text-align: center;
+    overflow: hidden; /* カラム落ち防止 */
+}
+@media screen and (max-width: 980px) {
+    #columns {
+        -webkit-column-count: 3;
+        -webkit-column-fill: auto;
+        -moz-column-count: 3;
+        -moz-column-fill: balance; 
+        column-count: 3;
+        column-fill: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #columns {
+        -webkit-column-count: auto;
+        -moz-column-count: auto;
+        column-count: auto;
+    }
+}
