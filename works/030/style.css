@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+body{
+	margin: 0;
+	padding: 0;
+}
+h1{
+	font-size: 50px;
+}
+h2{
+	font-size: 40px;
+}
+h3{
+	font-size: 30px;
+}
+.section{
+	text-align: center;
+	font-family: serif;
+}
+#section1{
+	background-color: #F27398;
+}
+#section2{
+	background-color: #FFD464;
+}
+#section3{
+	background-color: #1253A4;
+}
+
+
