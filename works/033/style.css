@@ -1,0 +1,12 @@
+@charset "utf-8";
+.control{
+	background-color: #666;
+	padding: 10px;
+	color: #FFF;
+}
+.col-1-1{
+	float: left;
+}
+.col-1-2{
+	float: left;
+}
