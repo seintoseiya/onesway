@@ -1,24 +1,26 @@
 $(function () {
     // $('.ef').textillate();
 
+    // セレクトボタン切り替えイベント
     $('#effect-in, #effect-out').change(function(){
     	var inVal = $('#effect-in').val();
     	var outVal = $('#effect-out').val();
     	effectIn(inVal, outVal);
     });
+    // エフェクト処理
     function effectIn(inVal, outVal){
 	    $('.ef').textillate({
-	        // ループのオンオフ、falseの場合、outは発動しない
+	        // 繰り返し、trueにしないと2回目以降が実行されない
 	        loop: true,
-	        // テキストが置き換えられるまでの表示時間
+	        // アニメーション開始までの時間
 	        minDisplayTime: 2000,
 	        // 遅延時間
 	        initialDelay: 0,
-	        // アニメーションが自動的にスタートするかどうか
+	        // アニメーションが自動的にスタートするか
 	        autoStart: true,
 	        // フェードインのエフェクトの詳細設定
 	        in: {
-	            // エフェクトの名前（animate.cssをご参照下さい）
+	            // エフェクトの種類（引数から取得）
 	            effect: inVal,
 	            // 遅延時間の指数
 	            delayScale: 1.5,
@@ -26,7 +28,7 @@ $(function () {
 	            delay: 50,
 	            // trueにすることでアニメーションをすべての文字に同時に適用される
 	            sync: false,
-	            // trueにすることで文字を順番にではなく、ランダムに入ってくるようにする
+	            // trueにすることで文字表示がランダムな順に表示される
 	            // (注：syncがtrueの場合は無効になる)
 	            shuffle: false
 	        },
