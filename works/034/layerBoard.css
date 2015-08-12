@@ -1,0 +1,44 @@
+html,body {
+	height: 100%;
+}
+
+
+* html .layer_board_bg,
+* html .layer_board {
+	position: absolute;
+}
+
+.layer_board_bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	
+	z-index: 1000;
+	
+	top: 0;
+	left: 0;
+	
+	display: none;
+	cursor: pointer;
+	background: #000;
+}
+
+.layer_board {
+	display: none;
+	position: fixed;
+	left: 50%;
+	margin: 50px 0px 0px -285px;
+	
+	text-align: center;
+	z-index: 2000;
+}
+a{
+	color: white;
+}
+img{
+	width: 500px;
+}
+
+h2{
+	color: white;
+}
