@@ -1,0 +1,13 @@
+@charset "utf-8";
+#container{
+	margin: 0 auto;
+	width: 60%;
+}
+#memo{
+	width: 100%;
+}
+.content{
+	float: left;
+	width: 90%;
+	word-wrap: break-word;
+}
