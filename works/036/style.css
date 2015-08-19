@@ -1,0 +1,9 @@
+body {
+  background: #0bd url(img/bg.jpg) no-repeat;
+  background-blend-mode: normal;
+  background-size: cover;
+}
+h1 {
+  font-family: Meiryo, "Hiragino Kaku Gothic Pro W3",sans-serif;
+  /*color: #fff;*/
+}

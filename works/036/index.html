@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8" />
+	<title>blend-mode</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>blend-mode</h1>
+	<h2>モード</h2>
+	<select name="mode">
+		<option value="color">色＋画像</option>
+		<option value="image">画像＋画像</option>
+		<option value="gradient">画像＋グラデーション</option>
+	</select>
+	<h2>ブレンドタイプ</h2>
+	<select name="blend">
+		<option value="normal">ブレンドなし</option>
+		<option value="multiply">multiply（乗算）</option>
+		<option value="overlay">overlay（オーバーレイ）</option>
+		<option value="darken">darken（暗く）</option>
+		<option value="lighten">lighten（明るく）</option>
+		<option value="color-dodge">color-dodge（覆い焼きカラー）</option>
+		<option value="color-burn">color-burn（焼き込みカラー）</option>
+		<option value="hard-light">hard-light（ハードライト）</option>
+		<option value="soft-light">soft-light（ソフトライト）</option>
+		<option value="difference">difference（差の絶対値）</option>
+		<option value="exclusion">exclusion（除外）</option>
+		<option value="hue">hue（色相）</option>
+		<option value="saturation">saturation（彩度）</option>
+		<option value="color">color（カラー）</option>
+		<option value="luminosity">luminosity（輝度）</option>
+	</select>
+	<script src="./js/jquery1.6.4.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
