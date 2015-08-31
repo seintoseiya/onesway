@@ -44,7 +44,7 @@ body{
 }
 .left_balloon:after,
 .left_balloon:before {
-    left: 15px;
+    left: 7.5px;
     top: -5px;
     border: solid transparent;
     content: " ";

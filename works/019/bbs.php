@@ -5,8 +5,6 @@ $user = htmlspecialchars($_GET['user'], ENT_QUOTES, "utf-8");
 $message = htmlspecialchars($_GET['message'], ENT_QUOTES, "utf-8");
 $inputValue = "<div class='user'>".$user."</div><div class='left_balloon'>".$message."</div>";
 
-
-
 // ファイルにデータを書き込み
 if($inputValue){
 	// ファイルをオープンできたか
