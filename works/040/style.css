@@ -1,0 +1,16 @@
+@charset "utf-8";
+body{
+    
+}
+#container{
+    width: 80%;
+    margin: 0 auto;
+}
+#leftArea{
+    float: left;
+    width: 50%;
+}
+#rightArea{
+    float: left;
+    width: 50%;
+}
