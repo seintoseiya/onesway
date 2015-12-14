@@ -1,0 +1,61 @@
+@charset "utf-8";
+li{
+	list-style: none;
+}
+.main-nav {
+  /* Flexboxの指定 */
+  display: flex;
+  /* justify-content - 要素と要素の間や、表示位置の指定
+  	space-between: 最初の要素が左端に、最後の要素が右端に移動し、その間の要素は等間隔に並べられる 
+   	flex-end: 右寄せ
+   	center: 中央揃え */
+  /*justify-content: space-between;*/
+}
+.main-nav a {
+  font-family: serif;
+  margin: 10px;
+  border-radius: 5px;
+  color: #000;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+.main-nav .logo {
+  font-size: 30px;
+}
+.main-nav li:first-child {
+  /* ロゴだけ左端 */
+  margin-right: auto;
+}
+.main {
+  display: flex;
+  /* 高さの異なる要素を垂直に中央揃え */
+  /*align-items: center;*/
+}
+.main section {
+  margin: 10px;
+  border-radius: 5px;
+  background: #F5F0CF;
+  padding: 15px;
+  /* 横幅調整 要素を利用可能な領域いっぱいに等倍で並べる (IE11の場合はflexではなくflex-grow: 1) */
+  flex: 1;
+}
+/* ２つ目の要素に対して、他のカラムの2倍の横幅 */
+.main .col-2 {
+  flex: 2;
+}
+.main h1 {
+  color: #E6AC27;
+  font-size: 1.5rem;
+}
+.main p {
+  margin-top: 10px;
+}
+@media screen and (max-width: 700px) {
+  .main {
+  	/*flex-direction は、要素の配置方向を指定するプロパティー
+  	デフォルト値は row
+  	column: 横並びから縦並びに変更*/
+    flex-direction: column;
+  }
+}
