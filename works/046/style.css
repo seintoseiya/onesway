@@ -1,0 +1,17 @@
+@charset "utf-8";
+.gradient-text {
+  color: #E55D87;
+  font-size: 50px;
+  font-family: serif;
+}
+ 
+@supports
+  (-webkit-background-clip: text) or
+  (background-clip: text) {
+  .gradient-text {
+    background: linear-gradient(90deg, #E55D87 10%, #5FC3E4 30%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
