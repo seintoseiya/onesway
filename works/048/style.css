@@ -1,0 +1,104 @@
+@charset "utf-8";
+body{
+    background: #ddd url(./js/Windy-master/images/bg.jpg) repeat top left;
+    font-family: 'Open Sans Condensed','Arial Narrow', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+}
+.mainNav{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.mainNav a{
+    color: #AADD33;
+}
+.mainNav li{
+    list-style: none;
+    padding-bottom: 5px;
+}
+h1{
+	background-color: #FF0088;
+	text-align: center;
+	border-radius: 10px;
+	color: #FFFFFF;
+}
+#container{
+	width: 600px;
+	margin: 50px auto;
+}
+/* flex */
+.flex-caption{
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+}
+/* swiper */
+.swiper-container {
+        width: 500px;
+        height: 300px;
+        margin: 20px auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img{
+	    max-width: 100%;
+	    height: auto;
+    }
+
+/* slick */
+.slick-slide img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* RhinoSlider */
+#rhinoSlider {
+	width:600px;
+	height:300px;
+	
+	/*IE bugfix*/
+	padding:0;
+	margin:0;
+}
+
+#rhinoSlider li { list-style:none; }
+#rhinoSlider img{
+	max-width: 100%;
+    height: auto;
+}
+
+#page {
+	width:600px;
+	margin:50px auto;
+}
+.windy-demo nav{
+	height: 50px;
+}
+
+/* CircleNavigationEffect */
+.cn-images img{
+    width: 100%;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom:0px(important);
+}

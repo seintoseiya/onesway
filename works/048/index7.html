@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ElasticSlideshow DEMO</title>
+	<!-- CSS file -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./js/ElasticSlideshow/css/style.css" />
+</head>
+<body>
+	<div id="container">
+		<nav class="mainNav">
+			<ul>
+				<li><a href="index.html">bxslider</a></li>
+				<li><a href="index2.html">FlexSlider</a></li>
+				<li><a href="index3.html">swiper</a></li>
+				<li><a href="index4.html">slick</a></li>
+				<li><a href="index5.html">RhinoSlider</a></li>
+				<li><a href="index6.html">Windy</a></li>
+				<li><a href="index7.html">ElasticSlideshow</a></li>
+				<li><a href="index8.html">CircleNavigationEffect</a></li>
+				<li><a href="index9.html">Slicebox</a></li>
+				<li><a href="index10.html">Modern-slide-in</a></li>
+			</ul>
+		</nav>
+		<h1>ElasticSlideshow</h1>
+		<div id="ei-slider" class="ei-slider">
+            <ul class="ei-slider-large">
+				<li>
+                    <img src="images/c3.jpg" alt="image03"/>
+                    <div class="ei-title">
+                        <h2>Title</h2>
+                        <h3>AAA</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/c1.jpg" alt="image01" />
+                    <div class="ei-title">
+                        <h2>Title</h2>
+                        <h3>BBB</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/c2.jpg" alt="image02" />
+                    <div class="ei-title">
+                        <h2>Title</h2>
+                        <h3>CCC</h3>
+                    </div>
+                </li>
+            </ul><!-- ei-slider-large -->
+            <ul class="ei-slider-thumbs">
+                <li class="ei-slider-element">Current</li>
+				<li><a href="#">Slide 3</a><img src="images/c3.jpg" alt="thumb03" /></li>
+                <li><a href="#">Slide 1</a><img src="images/c1.jpg" alt="thumb01" /></li>
+                <li><a href="#">Slide 2</a><img src="images/c2.jpg" alt="thumb02" /></li>
+            </ul><!-- ei-slider-thumbs -->
+        </div><!-- ei-slider -->
+	</div>
+
+	<!-- jQuery library -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<!-- Elastic Image Slideshow with Thumbnail Preview -->
+	<script type="text/javascript" src="./js/ElasticSlideshow/js/jquery.eislideshow.js"></script>
+    <script type="text/javascript" src="./js/ElasticSlideshow/js/jquery.easing.1.3.js"></script>
+    <script>
+	$(document).ready(function(){
+		$('#ei-slider').eislideshow({
+			animation			: 'center',
+			autoplay			: true,
+			slideshow_interval	: 3000,
+			titlesFactor		: 0
+		});
+	});
+	</script>	
+</body>
+</html>

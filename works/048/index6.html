@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Windy DEMO</title>
+	<!-- CSS file -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="./js/Windy-master/css/windy.css" />
+	<link rel="stylesheet" type="text/css" href="./js/Windy-master/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="./js/Windy-master/css/style1.css" />
+</head>
+<body>
+	<div id="container">
+		<nav class="mainNav">
+			<ul>
+				<li><a href="index.html">bxslider</a></li>
+				<li><a href="index2.html">FlexSlider</a></li>
+				<li><a href="index3.html">swiper</a></li>
+				<li><a href="index4.html">slick</a></li>
+				<li><a href="index5.html">RhinoSlider</a></li>
+				<li><a href="index6.html">Windy</a></li>
+				<li><a href="index7.html">ElasticSlideshow</a></li>
+				<li><a href="index8.html">CircleNavigationEffect</a></li>
+				<li><a href="index9.html">Slicebox</a></li>
+				<li><a href="index10.html">Modern-slide-in</a></li>
+			</ul>
+		</nav>
+		<h1>Windy</h1>
+		<div class="windy-demo">
+			<ul id="wi-el" class="wi-container">
+				<li><img src="./images/c1.jpg" />
+					<h4>Title</h4>
+					<p>Description</p>
+				</li>
+				<li><img src="./images/c2.jpg" />
+					<h4>Title</h4>
+					<p>Description</p>
+				</li>
+				<li><img src="./images/c3.jpg" />
+					<h4>Title</h4>
+					<p>Description</p>
+				</li>
+			</ul>
+			<nav>
+				<span id="nav-prev">prev</span>
+				<span id="nav-next">next</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="./js/Windy-master/js/modernizr.custom.79639.js"></script>
+	<script type="text/javascript" src="./js/Windy-master/js/jquery.windy.js"></script>
+	<script>
+	$(document).ready(function(){
+		var $el = $( '#wi-el' ),
+			windy = $el.windy(),
+			allownavnext = false,
+			allownavprev = false;
+
+		$( '#nav-prev' ).on( 'mousedown', function( event ) {
+
+			allownavprev = true;
+			navprev();
+
+		} ).on( 'mouseup mouseleave', function( event ) {
+
+			allownavprev = false;
+
+		} );
+
+		$( '#nav-next' ).on( 'mousedown', function( event ) {
+
+			allownavnext = true;
+			navnext();
+
+		} ).on( 'mouseup mouseleave', function( event ) {
+
+			allownavnext = false;
+
+		} );
+
+		function navnext() {
+			if( allownavnext ) {
+				windy.next();
+				setTimeout( function() {	
+					navnext();
+				}, 150 );
+			}
+		}
+
+		function navprev() {
+			if( allownavprev ) {
+				windy.prev();
+				setTimeout( function() {	
+					navprev();
+				}, 150 );
+			}
+		}
+	});
+	</script>	
+</body>
+</html>

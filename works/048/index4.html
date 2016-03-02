@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>slick DEMO</title>
+	<!-- CSS file -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="./js/slick-master/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="./js/slick-master/slick/slick-theme.css"/>
+</head>
+<body>
+	<div id="container">
+		<nav class="mainNav">
+			<ul>
+				<li><a href="index.html">bxslider</a></li>
+				<li><a href="index2.html">FlexSlider</a></li>
+				<li><a href="index3.html">swiper</a></li>
+				<li><a href="index4.html">slick</a></li>
+				<li><a href="index5.html">RhinoSlider</a></li>
+				<li><a href="index6.html">Windy</a></li>
+				<li><a href="index7.html">ElasticSlideshow</a></li>
+				<li><a href="index8.html">CircleNavigationEffect</a></li>
+				<li><a href="index9.html">Slicebox</a></li>
+				<li><a href="index10.html">Modern-slide-in</a></li>
+			</ul>
+		</nav>
+		<h1>slick</h1>
+		<ul class="slider">
+			<li><img src="./images/c1.jpg" /></li>
+			<li><img src="./images/c2.jpg" /></li>
+			<li><img src="./images/c3.jpg" /></li>
+		</ul>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script src="./js/slick-master/slick/slick.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$(".slider").slick({
+			// the magic
+			dots:true,
+			accessibility: true,
+			autoplay: true,
+			  autoplaySpeed: 2000,
+			speed: 400,
+			arrows: true,
+		});
+	});
+	</script>	
+</body>
+</html>

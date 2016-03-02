@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>RhinoSlider DEMO</title>
+	<!-- CSS file -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="./js/rhinoslider-1.05/css/rhinoslider-1.05.css" />
+</head>
+<body>
+	<div id="container">
+		<nav class="mainNav">
+			<ul>
+				<li><a href="index.html">bxslider</a></li>
+				<li><a href="index2.html">FlexSlider</a></li>
+				<li><a href="index3.html">swiper</a></li>
+				<li><a href="index4.html">slick</a></li>
+				<li><a href="index5.html">RhinoSlider</a></li>
+				<li><a href="index6.html">Windy</a></li>
+				<li><a href="index7.html">ElasticSlideshow</a></li>
+				<li><a href="index8.html">CircleNavigationEffect</a></li>
+				<li><a href="index9.html">Slicebox</a></li>
+				<li><a href="index10.html">Modern-slide-in</a></li>
+			</ul>
+		</nav>
+		<h1>RhinoSlider</h1>
+		<div id="page">
+			<ul id="rhinoSlider">
+				<li><img src="./images/c1.jpg" /></li>
+				<li><img src="./images/c2.jpg" /></li>
+				<li><img src="./images/c3.jpg" /></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script src="./js/rhinoslider-1.05/js/rhinoslider-1.05.min.js"></script>
+	<script src="./js/rhinoslider-1.05/js/mousewheel.js"></script>
+	<script src="./js/rhinoslider-1.05/js/easing.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#rhinoSlider').rhinoslider();
+	});
+	</script>		
+</body>
+</html>

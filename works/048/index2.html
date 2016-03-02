@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>FlexSlider DEMO</title>
+	<!-- CSS file -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" href="./js/FlexSlider-master/flexslider.css" type="text/css" />
+</head>
+<body>
+	<div id="container">
+		<nav class="mainNav">
+			<ul>
+				<li><a href="index.html">bxslider</a></li>
+				<li><a href="index2.html">FlexSlider</a></li>
+				<li><a href="index3.html">swiper</a></li>
+				<li><a href="index4.html">slick</a></li>
+				<li><a href="index5.html">RhinoSlider</a></li>
+				<li><a href="index6.html">Windy</a></li>
+				<li><a href="index7.html">ElasticSlideshow</a></li>
+				<li><a href="index8.html">CircleNavigationEffect</a></li>
+				<li><a href="index9.html">Slicebox</a></li>
+				<li><a href="index10.html">Modern-slide-in</a></li>
+			</ul>
+		</nav>
+		<h1>FlexSlider</h1>
+		<div class="flexslider">
+			<ul class="slides">
+				<li><img src="images/c1.jpg" /><p class="flex-caption">ゾウ</p></li>
+				<li><img src="images/c2.jpg" /><p class="flex-caption">サボテン</p></li>
+				<li><img src="images/c3.jpg" /><p class="flex-caption">街</p></li>
+			</ul>
+		</div>
+		<h2 id="caption"></h2>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script src="./js/FlexSlider-master/jquery.flexslider-min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('.flexslider').flexslider({
+		    animation: "slide",
+		    slideshowSpeed: 2000
+		});
+	});
+	</script>	
+</body>
+</html>

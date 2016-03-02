@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CircleNavigationEffect DEMO</title>
+	<!-- CSS file -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./js/CircleNavigationEffect/css/style.css" />
+    <script id="barTmpl" type="text/x-jquery-tmpl">
+        <div class="cn-bar">
+            <div class="cn-nav">
+				<a href="#" class="cn-nav-prev">
+                    <span>Previous</span>
+					<div style="background-image:url(${prevSource});"></div> 
+				</a>
+				<a href="#" class="cn-nav-next">
+                    <span>Next</span>
+					<div style="background-image:url(${nextSource});"></div>
+				</a>
+            </div><!-- cn-nav -->
+            <div class="cn-nav-content">
+                <div class="cn-nav-content-prev">
+                    <span>Previous image</span>
+                    <h3>${prevTitle}</h3>
+                </div>
+                <div class="cn-nav-content-current">
+                    <span>Currently viewing</span>
+                    <h2>${currentTitle}</h2>
+                </div>
+                <div class="cn-nav-content-next">
+                    <span>Next image</span>
+                    <h3>${nextTitle}</h3>
+                </div>
+            </div><!-- cn-nav-content -->
+        </div><!-- cn-bar -->
+	</script>
+</head>
+<body>
+	<div id="container">
+		<nav class="mainNav">
+			<ul>
+				<li><a href="index.html">bxslider</a></li>
+				<li><a href="index2.html">FlexSlider</a></li>
+				<li><a href="index3.html">swiper</a></li>
+				<li><a href="index4.html">slick</a></li>
+				<li><a href="index5.html">RhinoSlider</a></li>
+				<li><a href="index6.html">Windy</a></li>
+				<li><a href="index7.html">ElasticSlideshow</a></li>
+				<li><a href="index8.html">CircleNavigationEffect</a></li>
+				<li><a href="index9.html">Slicebox</a></li>
+				<li><a href="index10.html">Modern-slide-in</a></li>
+			</ul>
+		</nav>
+        <h1>CircleNavigationEffect</h1>
+        <div id="cn-slideshow" class="cn-slideshow">
+            <div class="cn-images">
+                <img src="images/c1.jpg" alt="image01" title="Beautiful Scenery 1" data-thumb="images/c1.jpg" style="display:block;"/>
+                <img src="images/c2.jpg" alt="image02" title="Beautiful Scenery 2" data-thumb="images/c2.jpg"/>
+                <img src="images/c3.jpg" alt="image03" title="Beautiful Scenery 3" data-thumb="images/c3.jpg"/>
+            </div><!-- cn-images -->
+        </div><!-- cn-slideshow -->
+        <p>Hover over the arrows to see the effect.</p>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="./js/CircleNavigationEffect/js/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="./js/CircleNavigationEffect/js/jquery.slideshow.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#cn-slideshow').slideshow();
+	});
+	</script>	
+</body>
+</html>

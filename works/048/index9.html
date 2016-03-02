@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Slicebox DEMO</title>
+	<!-- CSS file -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link href="./js/Slicebox/css/slicebox.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="./js/Slicebox/css/custom.css" />
+	<script type="text/javascript" src="./js/Slicebox/js/modernizr.custom.46884.js"></script>
+</head>
+<body>
+	<div id="container">
+		<nav class="mainNav">
+			<ul>
+				<li><a href="index.html">bxslider</a></li>
+				<li><a href="index2.html">FlexSlider</a></li>
+				<li><a href="index3.html">swiper</a></li>
+				<li><a href="index4.html">slick</a></li>
+				<li><a href="index5.html">RhinoSlider</a></li>
+				<li><a href="index6.html">Windy</a></li>
+				<li><a href="index7.html">ElasticSlideshow</a></li>
+				<li><a href="index8.html">CircleNavigationEffect</a></li>
+				<li>Slicebox</li>
+				<li><a href="index10.html">Modern-slide-in</a></li>
+			</ul>
+		</nav>
+		<h1>Slicebox</h1>
+		<ul id="sb-slider" class="sb-slider">
+		  <li><img src="./images/c1.jpg" /></li>
+		  <li><img src="./images/c2.jpg" /></li>
+		  <li><img src="./images/c3.jpg" /></li>
+		</ul>
+		<div id="shadow" class="shadow"></div>
+
+		<div id="nav-arrows" class="nav-arrows">
+			<a href="#">Next</a>
+			<a href="#">Previous</a>
+		</div>
+
+		<div id="nav-dots" class="nav-dots">
+			<span class="nav-dot-current"></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="./js/Slicebox/js/jquery.slicebox.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			var Page = (function() {
+
+				var $navArrows = $( '#nav-arrows' ).hide(),
+					$navDots = $( '#nav-dots' ).hide(),
+					$nav = $navDots.children( 'span' ),
+					$shadow = $( '#shadow' ).hide(),
+					slicebox = $( '#sb-slider' ).slicebox( {
+						onReady : function() {
+
+							$navArrows.show();
+							$navDots.show();
+							$shadow.show();
+
+						},
+						onBeforeChange : function( pos ) {
+
+							$nav.removeClass( 'nav-dot-current' );
+							$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+						},
+						autoplay : true
+					} ),
+					
+					init = function() {
+
+						initEvents();
+						
+					},
+					initEvents = function() {
+
+						// add navigation events
+						$navArrows.children( ':first' ).on( 'click', function() {
+
+							slicebox.next();
+							return false;
+
+						} );
+
+						$navArrows.children( ':last' ).on( 'click', function() {
+							
+							slicebox.previous();
+							return false;
+
+						} );
+
+						$nav.each( function( i ) {
+						
+							$( this ).on( 'click', function( event ) {
+								
+								var $dot = $( this );
+								
+								if( !slicebox.isActive() ) {
+
+									$nav.removeClass( 'nav-dot-current' );
+									$dot.addClass( 'nav-dot-current' );
+								
+								}
+								
+								slicebox.jump( i + 1 );
+								return false;
+							
+							} );
+							
+						} );
+
+					};
+
+					return { init : init };
+
+			})();
+
+			Page.init();
+
+		});
+	</script>
+</body>
+</html>

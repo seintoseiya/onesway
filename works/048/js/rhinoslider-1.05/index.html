@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Rhinoslider 1.05</title>
+		<link type="text/css" rel="stylesheet" href="css/rhinoslider-1.05.css" />
+		<script type="text/javascript" src="../jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/rhinoslider-1.05.min.js"></script>
+		<script type="text/javascript" src="js/mousewheel.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#slider').rhinoslider();
+			});
+		</script>
+		<style type="text/css">
+			body { background-color:#000; }
+			
+			#slider {
+				width:600px;
+				height:250px;
+				
+				/*IE bugfix*/
+				padding:0;
+				margin:0;
+			}
+			
+			#slider li { list-style:none; }
+			
+			#page {
+				width:600px;
+				margin:50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="page">
+			<ul id="slider">
+				<li><img src="img/slider/01.jpg" alt="" /></li>
+				<li><img src="img/slider/02.jpg" alt="" /></li>
+				<li><img src="img/slider/03.jpg" alt="" /></li>
+				<li><img src="img/slider/04.jpg" alt="" /></li>
+				<li><img src="img/slider/05.jpg" alt="" /></li>
+			</ul>
+		</div>
+	</body>
+</html>
