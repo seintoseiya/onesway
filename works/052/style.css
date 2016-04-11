@@ -1,0 +1,18 @@
+@charset "utf-8";
+body{
+	
+}
+#container{
+	margin: 0 auto;
+    width: 900px;
+    height: 900px;
+    text-align: center;
+}
+.hoge{
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: #FFE9DE;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
